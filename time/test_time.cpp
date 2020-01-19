@@ -2,6 +2,7 @@
 //#include <sys/time.h>
 #include <ctime>
 
+using namespace std;
 /**
 class Timer{
     public:
@@ -30,12 +31,22 @@ int main()
     //std::cout<<start<<std::endl;
     time_t start = time(0);
     //int end = timer.CurrentTime();
-    for(int i; i <100000; i++){
+    for(int i; i <10; i++){
         std::cout<<"我怎么这么好看...";
     }
     time_t end=time(0);
+    int test = time(0);
     //std::cout<<end<<std::endl;
-    std::cout<<"end:"<<end<<"start:"<<start<<std::endl;
+    std::cout<<"end:"<<end<<"start:"<<start<<"test:"<<test<<std::endl;
+    std::cout<<"3/2:"<<3%2<<"   4/2:"<<4%2<<std::endl;
+
+    for(int i = 0; i < 10; i++)
+    {
+        //srand((unsigned)time(i));//采用系统当前时钟作为种子
+        //srand((unsigned)i);//采用i作为种子
+        int num_rand = rand();
+        cout<<num_rand<<endl;
+    }
     return 0;
 }
 
